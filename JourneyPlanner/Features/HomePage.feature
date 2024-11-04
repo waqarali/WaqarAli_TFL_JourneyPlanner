@@ -1,5 +1,6 @@
 ﻿Feature: Journey Planner Widget
 
+  @Chrome
   Scenario: Plan a valid journey from Leicester Square to Covent Garden
     Given I navigate to the TfL homepage
     When I enter "Leicester Square" in the from location
@@ -9,6 +10,7 @@
     And I click Plan my journey
     Then I should see the walking and cycling time results
 
+  @Chrome
   Scenario: Edit preferences for least walking routes
     Given I have planned a journey from "Leicester Square" to "Covent Garden"
     When I click Edit preferences
@@ -16,12 +18,14 @@
     And I click Update journey
     Then I should see the updated journey time
 
+  @Chrome
   Scenario: View details for Covent Garden station
     Given I have planned a journey from "Leicester Square" to "Covent Garden"
     Given I have Updated preferences
     When I click View Details
     Then I should see complete access information for "Covent Garden Underground Station"
 
+  @Chrome
   Scenario: Attempt to plan a journey with invalid locations
     Given I navigate to the TfL homepage
     When I enter "Invalid Station" in the from location
@@ -29,6 +33,7 @@
     And I click Plan my journey
     Then I should see an error message indicating no results found
 
+  @Chrome
   Scenario: Attempt to plan a journey with no locations
     Given I navigate to the TfL homepage
     When I do not enter any locations

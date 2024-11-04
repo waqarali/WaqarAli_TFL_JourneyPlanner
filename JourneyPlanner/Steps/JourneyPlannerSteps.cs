@@ -4,19 +4,19 @@ using TechTalk.SpecFlow;
 using NUnit.Framework;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using JourneyPlanner.Utils.Selenium;
 
 [Binding]
 public class JourneyPlannerSteps
 {
-    private IWebDriver _driver;
-    private WebDriverWait _wait;
+    private IWebDriver _driver = Driver.Browser();
+    private WebDriverWait _wait = new WebDriverWait(DriverController.Instance.WebDriver, TimeSpan.FromSeconds(5));
 
-    [BeforeScenario]
     public void SetUp()
     {
-        _driver = new ChromeDriver();
-        _driver.Manage().Window.Maximize();
+        _driver = Driver.Browser();
         _driver.Navigate().GoToUrl("https://tfl.gov.uk/");
+        _driver.Manage().Window.Maximize();
         _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
         AcceptCookies();
     }

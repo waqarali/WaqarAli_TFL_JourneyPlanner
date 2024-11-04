@@ -75,12 +75,14 @@ namespace JourneyPlanner.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Plan a valid journey from Leicester Square to Covent Garden")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
         public void PlanAValidJourneyFromLeicesterSquareToCoventGarden()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Chrome"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Plan a valid journey from Leicester Square to Covent Garden", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 3
+#line 4
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -90,25 +92,25 @@ namespace JourneyPlanner.Features
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 5
     testRunner.Given("I navigate to the TfL homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 5
+#line 6
     testRunner.When("I enter \"Leicester Square\" in the from location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 6
+#line 7
     testRunner.And("I select \"Leicester Square Underground Station\" from suggestions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 7
+#line 8
     testRunner.And("I enter \"Covent Garden\" in the to location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 9
     testRunner.And("I select \"Covent Garden Underground Station\" from suggestions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 9
+#line 10
     testRunner.And("I click Plan my journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 11
     testRunner.Then("I should see the walking and cycling time results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -117,12 +119,14 @@ namespace JourneyPlanner.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Edit preferences for least walking routes")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
         public void EditPreferencesForLeastWalkingRoutes()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Chrome"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit preferences for least walking routes", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
+#line 14
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -132,19 +136,19 @@ namespace JourneyPlanner.Features
             else
             {
                 this.ScenarioStart();
-#line 13
+#line 15
     testRunner.Given("I have planned a journey from \"Leicester Square\" to \"Covent Garden\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
+#line 16
     testRunner.When("I click Edit preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 15
+#line 17
     testRunner.And("I select Routes with least walking", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 18
     testRunner.And("I click Update journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 19
     testRunner.Then("I should see the updated journey time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -153,12 +157,14 @@ namespace JourneyPlanner.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("View details for Covent Garden station")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
         public void ViewDetailsForCoventGardenStation()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Chrome"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View details for Covent Garden station", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 19
+#line 22
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -168,16 +174,16 @@ namespace JourneyPlanner.Features
             else
             {
                 this.ScenarioStart();
-#line 20
+#line 23
     testRunner.Given("I have planned a journey from \"Leicester Square\" to \"Covent Garden\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 21
+#line 24
     testRunner.Given("I have Updated preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 25
     testRunner.When("I click View Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 26
     testRunner.Then("I should see complete access information for \"Covent Garden Underground Station\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -186,12 +192,14 @@ namespace JourneyPlanner.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Attempt to plan a journey with invalid locations")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
         public void AttemptToPlanAJourneyWithInvalidLocations()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Chrome"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Attempt to plan a journey with invalid locations", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 25
+#line 29
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -201,19 +209,19 @@ namespace JourneyPlanner.Features
             else
             {
                 this.ScenarioStart();
-#line 26
+#line 30
     testRunner.Given("I navigate to the TfL homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 27
+#line 31
     testRunner.When("I enter \"Invalid Station\" in the from location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 28
+#line 32
     testRunner.And("I enter \"Another Invalid Station\" in the to location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 33
     testRunner.And("I click Plan my journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 30
+#line 34
     testRunner.Then("I should see an error message indicating no results found", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -222,12 +230,14 @@ namespace JourneyPlanner.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Attempt to plan a journey with no locations")]
+        [NUnit.Framework.CategoryAttribute("Chrome")]
         public void AttemptToPlanAJourneyWithNoLocations()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Chrome"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Attempt to plan a journey with no locations", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 32
+#line 37
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -237,16 +247,16 @@ namespace JourneyPlanner.Features
             else
             {
                 this.ScenarioStart();
-#line 33
+#line 38
     testRunner.Given("I navigate to the TfL homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 34
+#line 39
     testRunner.When("I do not enter any locations", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 35
+#line 40
     testRunner.And("I click Plan my journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 41
     testRunner.Then("I should see an error message indicating that locations are required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

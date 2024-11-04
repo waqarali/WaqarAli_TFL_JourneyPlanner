@@ -5,6 +5,9 @@ using JourneyPlanner.Utils.Selenium;
 using System;
 using System.Linq;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
+using OpenQA.Selenium.Support.UI;
 
 namespace JourneyPlanner.Hooks
 {
@@ -35,10 +38,26 @@ namespace JourneyPlanner.Hooks
 
             else
             {
-                //DriverController.Instance.StartChrome();
-                //DriverController.Instance.WebDriver.Manage().Cookies.DeleteAllCookies();
+                DriverController.Instance.StartChrome();
+                DriverController.Instance.WebDriver.Manage().Cookies.DeleteAllCookies();
             }
+            DriverController.Instance.WebDriver.Navigate().GoToUrl("https://tfl.gov.uk/");
+            AcceptCookies();
 
+        }
+        internal static void AcceptCookies()
+        {
+            Thread.Sleep(2000);
+            try
+            {
+                WebDriverWait _wait = new WebDriverWait(DriverController.Instance.WebDriver, TimeSpan.FromSeconds(5));
+                var cookieBanner = _wait.Until(ExpectedConditions.ElementIsVisible(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")));
+                cookieBanner.Click();
+            }
+            catch (WebDriverTimeoutException)
+            {
+                Console.WriteLine("Cookie banner did not appear within the specified time.");
+            }
         }
         /// <summary>
         /// Stop the web Browser. 
